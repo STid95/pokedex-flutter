@@ -21,7 +21,7 @@ class PokemonGrid extends StatelessWidget {
         padding: const EdgeInsets.all(20),
         mainAxisSpacing: 20,
         crossAxisSpacing: 20,
-        crossAxisCount: 2,
+        crossAxisCount: MediaQuery.of(context).size.width > 800 ? 4 : 2,
         children: pokemons != null
             ? pokemons!
                 .map((e) => FutureBuilder(
